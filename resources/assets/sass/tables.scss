@@ -1,0 +1,37 @@
+table {
+    text-align: left;
+    width: 100%;
+}
+
+#miners a {
+    text-decoration: none;
+    color: $text;
+}
+
+#miningActivity tr:hover td,
+#miners tr:hover td {
+    background: $highlight;
+    color: #fff;
+    cursor: pointer;
+    a {
+        color: #fff;
+    }
+}
+
+th, td {
+    background: #fff;
+    padding: 10px;
+}
+
+.rented td {
+    background: #ddd;
+}
+
+th {
+    background: $bg_dark;
+    color: #fff;
+}
+
+.numeric {
+    text-align: right;
+}

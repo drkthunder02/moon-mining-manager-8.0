@@ -18,6 +18,14 @@ class EventServiceProvider extends ServiceProvider
         Registered::class => [
             SendEmailVerificationNotification::class,
         ],
+        
+        \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+            \SocialiteProviders\Eveonline\EveonlineExtendSocialite::class.'@handle',
+        ],
+
+        'App\Events\Event' => [
+            'App\Listeners\EventListener',
+        ],
     ];
 
     /**
@@ -27,6 +35,6 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        parent::boot();
     }
 }
